@@ -48,7 +48,7 @@ export function Hero() {
                 </div>
               ))}
             </div>
-            <p className="text-white text-[10px] sm:text-xs font-inter leading-tight">
+            <p className="text-white text-[10px] sm:text-xs font-inter leading-tight whitespace-nowrap">
               Trusted by 1,000+ Businesses for Fast, Secure, and Efficient Logistics
             </p>
           </div>
@@ -537,36 +537,29 @@ function TestimonialCard({ profile, name, role, testimony, remarkColor, borderCo
 
 export function Get_In_Touch() {
   return (
-    <section className="w-full flex justify-center items-center pt-[80px] pb-8 px-4 bg-white">
-      <div className="w-full max-w-[1344px] flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-[84px]">
+    <section className="w-screen bg-white pt-[80px] pb-8 flex justify-start items-center">
+      <div className="w-full px-[24px] sm:px-[64px] flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-[84px]">
         {/* Heading & Subheading */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[36px] w-full sm:w-[908px] h-auto sm:h-[84px] items-start sm:items-center">
-          {/* Heading */}
           <h2 className="text-[#1A1A1A] font-['Outfit'] font-medium text-[24px] sm:text-[32px] leading-[32px] sm:leading-[41.6px] w-full sm:w-[399px]">
             Let’s Move Your Business Forward
           </h2>
-
-          {/* Subheading */}
           <p className="text-[#333333] opacity-94 font-['Inter'] font-normal text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] w-full sm:w-[473px]">
             Take the next step with trusted logistics that drive growth and deliver results; partner with us today.
           </p>
         </div>
 
-        {/* Vector and Button on opposite sides */}
+        {/* Vector + Button */}
         <div className="flex flex-row items-center justify-between w-full sm:w-[351.68px]">
-          {/* Vector on the left */}
           <img
             src={vector4}
             alt="Vector"
             className="w-[96.68px] h-[15.77px] opacity-60"
           />
-
-          {/* Button on the right */}
           <button
             className="flex flex-row items-center gap-[6px] px-[18px] py-[8px] h-[40px] rounded-full ml-auto shadow-md"
             style={{
-              background:
-                "linear-gradient(106.69deg, #B21F24 -15.52%, #025E9B 130.42%)",
+              background: "linear-gradient(106.69deg, #B21F24 -15.52%, #025E9B 130.42%)",
               boxShadow: "0px 6px 14px 0px #8888881F",
             }}
             onClick={() => {

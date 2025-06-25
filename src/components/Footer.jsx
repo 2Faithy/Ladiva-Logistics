@@ -8,7 +8,7 @@ import whatsappIcon from "../images/whatsapp.png";
 
 export default function Footer() {
   return (
-    <footer className="w-screen bg-white px-[24px] sm:px-[84px] py-[40px] flex justify-center">
+    <footer className="w-full bg-white py-[40px] px-[24px] sm:px-[64px]">
       <div className="w-full flex flex-col gap-[16px]">
         {/* Top section */}
         <div className="flex flex-col gap-[24px]">
