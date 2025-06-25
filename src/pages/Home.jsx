@@ -37,22 +37,33 @@ export function Hero() {
       <div className="absolute inset-0 bg-[#02021C]/95 rounded-t-[20px] sm:rounded-t-[24px] md:rounded-t-[28px] z-0" />
 
       {/* Headline and Trusted by */}
-      <div className="relative z-10 pt-16 px-4 max-w-5xl mx-auto flex flex-col items-center text-center gap-6">
-        {/* Trusted By */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center gap-2 sm:gap-4 border border-white rounded-full px-4 py-2 bg-[#02021C]/80 shadow">
-          <div className="flex flex-row items-center justify-center gap-2 sm:gap-4">
-            <div className="flex items-center -space-x-2">
-              {[clothes2order, businessOfFashion, clothes2order].map((img, i) => (
-                <div key={i} className="w-5 h-5 sm:w-6 sm:h-6 bg-white rounded-full overflow-hidden flex items-center justify-center">
-                  <img src={img} alt={`Brand ${i}`} className="object-contain w-3.5 h-3.5 sm:w-5 sm:h-5" />
-                </div>
-              ))}
-            </div>
-            <p className="text-white text-[10px] sm:text-xs font-inter leading-tight whitespace-nowrap">
-              Trusted by 1,000+ Businesses for Fast, Secure, and Efficient Logistics
-            </p>
+<div className="relative z-10 pt-16 px-4 max-w-5xl mx-auto flex flex-col items-center text-center gap-6">
+  {/* Trusted By */}
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center 
+                  gap-1 sm:gap-4 border border-white rounded-full 
+                  px-2 py-1 sm:px-4 sm:py-2 
+                  bg-[#02021C]/80 shadow scale-[0.85] sm:scale-100 transition-transform">
+    <div className="flex flex-row items-center justify-center gap-1 sm:gap-4">
+      <div className="flex items-center -space-x-1 sm:-space-x-2">
+        {[clothes2order, businessOfFashion, clothes2order].map((img, i) => (
+          <div
+            key={i}
+            className="w-4 h-4 sm:w-6 sm:h-6 bg-white rounded-full overflow-hidden flex items-center justify-center"
+          >
+            <img
+              src={img}
+              alt={`Brand ${i}`}
+              className="object-contain w-3 h-3 sm:w-5 sm:h-5"
+            />
           </div>
-        </div>
+        ))}
+      </div>
+      <p className="text-white text-[9px] sm:text-xs font-inter leading-tight whitespace-nowrap">
+        Trusted by 1,000+ Businesses for Fast, Secure, and Efficient Logistics
+      </p>
+  </div>
+</div>
+
         
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl lg:text-[64px] font-semibold font-['Gabarito'] text-white leading-snug sm:leading-[60px] lg:leading-[76.8px] relative">
@@ -118,28 +129,28 @@ export function Hero() {
       </div>
 
       {/* Mobile Layout: Buttons + Images */}
-      <div className="block sm:hidden px-4 pt-10 z-10 relative">
-        <div className="flex flex-col gap-4 items-center mb-8">
-          <button
-            onClick={() => (window.location.href = "/contact")}
-            className="flex items-center justify-between gap-3 px-6 py-3 rounded-full text-white font-semibold font-manrope text-base bg-gradient-to-r from-[#FF1A1A] to-[#0066FF] w-full max-w-[320px] shadow-md"
-          >
-            Let’s Move Your Goods
-            <div className="w-6 h-6 bg-[#0066FF] rounded-full flex items-center justify-center">
-              <img src={truckIcon} alt="Truck icon" className="w-[20px] h-[16px] object-contain" />
-            </div>
-          </button>
+<div className="block sm:hidden px-4 pt-10 z-10 relative">
+  <div className="flex flex-col gap-3 items-center mb-6">
+    <button
+      onClick={() => (window.location.href = "/contact")}
+      className="flex items-center justify-between gap-2 px-4 py-2 rounded-full text-white font-semibold font-manrope text-sm bg-gradient-to-r from-[#FF1A1A] to-[#0066FF] w-full max-w-[260px] shadow-md"
+    >
+      Let’s Move Your Goods
+      <div className="w-5 h-5 bg-[#0066FF] rounded-full flex items-center justify-center">
+        <img src={truckIcon} alt="Truck icon" className="w-[16px] h-[13px] object-contain" />
+      </div>
+    </button>
 
-          <button
-            onClick={() => (window.location.href = "/about")}
-            className="flex items-center justify-between gap-3 px-6 py-3 rounded-full border border-white text-white font-manrope text-base w-full max-w-[320px] shadow"
-          >
-            Learn More About Us
-            <div className="w-6 h-6 flex items-center justify-center">
-              <img src={sendIcon} alt="Send icon" className="w-4 h-4 object-contain opacity-85" />
-            </div>
-          </button>
-        </div>
+    <button
+      onClick={() => (window.location.href = "/about")}
+      className="flex items-center justify-between gap-2 px-4 py-2 rounded-full border border-white text-white font-manrope text-sm w-full max-w-[260px] shadow"
+    >
+      Learn More About Us
+      <div className="w-5 h-5 flex items-center justify-center">
+        <img src={sendIcon} alt="Send icon" className="w-3.5 h-3.5 object-contain opacity-85" />
+      </div>
+    </button>
+</div>
 
         <div className="flex flex-col gap-6 items-center">
           {[image1, image2, image3].map((img, i) => (

@@ -42,62 +42,43 @@ export default function Footer() {
                 </p>
               </div>
 
-              {/* Contact Info */}
-              <div className="flex flex-col gap-4 w-full max-w-[315px]">
-                <div className="grid grid-cols-1 xs:grid-cols-2 gap-[12px]">
-                  {/* Email */}
-                  <a
-                    href="mailto:help@ladivalogistics.com"
-                    className="flex gap-[4px] items-center"
-                  >
-                    <div className="w-[24px] h-[24px] flex items-center justify-center">
-                      <img src={emailIcon} alt="Email" className="w-[12px] h-[9.6px]" />
-                    </div>
-                    <span className="text-[12px] text-[#333333] font-['Inter']">help@ladivalogistics.com</span>
-                  </a>
+{/* Contact Info — Inline Style Like Screenshot */}
+<div className="flex flex-wrap gap-x-6 gap-y-4 items-center text-[#333333] text-[12px] font-['Inter']">
+  {/* Email */}
+  <a href="mailto:help@ladivalogistics.com" className="flex items-center gap-2">
+    <img src={emailIcon} alt="Email" className="w-4 h-4 object-contain" />
+    help@ladivalogistics.com
+  </a>
 
-                  {/* Phone */}
-                  <a
-                    href="tel:+2347033517113"
-                    className="flex gap-[4px] items-center"
-                  >
-                    <div className="w-[24px] h-[24px] flex items-center justify-center">
-                      <img src={phoneIcon} alt="Phone" className="w-[12px] h-[12px]" />
-                    </div>
-                    <span className="text-[12px] text-[#333333] font-['Inter']">+2347033517113</span>
-                  </a>
-                </div>
+  {/* Phone */}
+  <a href="tel:+2347033517113" className="flex items-center gap-2">
+    <img src={phoneIcon} alt="Phone" className="w-4 h-4 object-contain" />
+    +2347033517113
+  </a>
 
-                {/* Socials */}
-                <div className="grid grid-cols-1 xs:grid-cols-2 gap-[12px]">
-                  {/* Instagram */}
-                  <a
-                    href="https://instagram.com/ladiva_logistics"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex gap-[4px] items-center"
-                  >
-                    <div className="w-[24px] h-[24px] flex items-center justify-center">
-                      <img src={instaIcon} alt="Instagram" className="w-[12px] h-[12px]" />
-                    </div>
-                    <span className="text-[12px] text-[#333333] font-['Inter']">ladiva_logistics</span>
-                  </a>
+  {/* Instagram */}
+  <a
+    href="https://instagram.com/ladiva_logistics"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2"
+  >
+    <img src={instaIcon} alt="Instagram" className="w-4 h-4 object-contain" />
+    ladiva_logistics
+  </a>
 
-                  {/* WhatsApp */}
-                  <a
-                    href="https://wa.me/2349119318878"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex gap-[4px] items-center"
-                  >
-                    <div className="w-[24px] h-[24px] flex items-center justify-center">
-                      <img src={whatsappIcon} alt="WhatsApp" className="w-[12px] h-[12px]" />
-                    </div>
-                    <span className="text-[12px] text-[#333333] font-['Inter']">+2349119318878</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+  {/* WhatsApp */}
+  <a
+    href="https://wa.me/2349119318878"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2"
+  >
+    <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
+    +2349119318878
+  </a>
+</div>
+</div>
 
             {/* Sitemap and Newsletter */}
             <div className="grid sm:flex sm:flex-row gap-[40px] sm:gap-[90px] w-full sm:w-[518px]">
@@ -128,7 +109,7 @@ export default function Footer() {
                   }}
                   className="border border-[#3333338F] rounded-[4px] px-[11px] py-[6px] w-full sm:w-[312px]"
                 >
-                  <div className="flex flex-col sm:flex-row justify-between items-center w-full gap-2 sm:gap-0">
+                  <div className="flex flex-row justify-between items-center w-full gap-2">
                     <input
                       type="email"
                       placeholder="Your email"
