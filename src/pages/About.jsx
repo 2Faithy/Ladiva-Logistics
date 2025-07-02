@@ -7,11 +7,12 @@ import map from "../images/map.png";
 import vector4 from "../images/vector4.png";
 import phone from "../images/phone.png";
 
+
 // ✔️ Get_In_Touch
 export function Get_In_Touch() {
   return (
-    <section className="w-screen bg-white pt-[80px] pb-8 flex justify-start items-center">
-      <div className="w-full px-[24px] sm:px-[64px] flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-[84px]">
+    <section className="get-in-touch w-screen bg-white pt-[80px] pb-8 flex justify-start items-center">
+      <div className="get-in-touch-container w-full px-[24px] sm:px-[64px] flex flex-col sm:flex-row items-center sm:items-start gap-8 sm:gap-[84px]">
         {/* Heading & Subheading */}
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-[36px] w-full sm:w-[908px] h-auto sm:h-[84px] items-start sm:items-center">
           <h2 className="text-[#1A1A1A] font-['Outfit'] font-medium text-[24px] sm:text-[32px] leading-[32px] sm:leading-[41.6px] w-full sm:w-[399px]">
@@ -44,11 +45,11 @@ export function Get_In_Touch() {
             </span>
             <div className="w-[20px] h-[20px] flex justify-center items-center rounded-full p-[4px]">
               <div className="w-[12px] h-[12px] flex justify-center items-center">
-                <img
-                  src={phone}
-                  alt="Phone Icon"
-                  className="w-[9px] h-[8.5px]"
-                />
+                              <img
+                src={phone}
+                alt="Phone Icon"
+                className="w-[9px] h-[8.5px]"
+              />
               </div>
             </div>
           </button>
@@ -99,7 +100,7 @@ export default function About() {
         style={{ backgroundImage: `url(${background_hero})` }}
       >
         <div className="absolute inset-0 bg-[#02021CF0] opacity-95 z-0" />
-        <div className="relative z-10 w-full max-w-[1448px] mx-auto px-4">
+        <div className="hero-section relative z-10 w-full max-w-[1448px] mx-auto px-4">
           <div className="flex flex-col gap-[12px] max-w-[1174px] ml-2">
             <div className="inline-flex items-center gap-[4px]">
               <span className="w-[4px] h-[4px] bg-[#CC0000] rounded-full inline-block" />
@@ -122,15 +123,14 @@ export default function About() {
           </div>
         </div>
       </div>
+     
 
       {/* ABOUT SECTION */}
       <div className="relative z-20 -mt-[60px] w-full flex justify-center px-4">
-        <div className="w-full max-w-[1237px] bg-white rounded-[16px] shadow border-b border-gray-200 px-4 md:px-6 py-10">
+        <div className="about-section w-full max-w-[1237px] bg-white rounded-[16px] shadow border-b border-gray-200 px-4 md:px-6 py-10">
           <div className="flex flex-col gap-[32px]">
             <p className="font-inter text-[#333333] text-[18px] leading-[27px] capitalize opacity-95">
-              Ladiva Logistics is a forward-thinking logistics company dedicated to delivering reliable,
-              efficient, and customer-centered services. With a focus on innovation, timeliness, and safety,
-              we help businesses thrive by ensuring seamless supply chain and delivery processes.
+                          Ladiva Logistics is a forward-thinking logistics company dedicated to delivering reliable, efficient, and customer-focused solutions. We specialize in domestic pick-up and delivery, warehousing, and international shipping. With a commitment to excellence and innovation, our team ensures every package arrives safely and on time. Whether you're a small business or a large enterprise, Ladiva Logistics is your trusted partner for seamless supply chain support. Backed by a professional team and modern infrastructure, we simplify logistics to help your business grow. Choose Ladiva for service you can count on; wherever your goods need to go, we’ll get them there smoothly.
             </p>
 
             <div className="w-full flex flex-wrap justify-start gap-x-[0px] gap-y-[16px] opacity-90 mb-[0px] mt-[19px]">
@@ -153,47 +153,55 @@ export default function About() {
               ))}
             </div>
 
-            <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center flex-wrap gap-4 mt-[-20px]">
-              <div className="flex flex-wrap gap-[16px]">
+       <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center flex-wrap gap-4 sm:gap-y-[26px]" >
+              <div className="flex flex-wrap gap-[16px] mt-[-20px]">
                 {[
                   "Always‑On Support",
-                  "Real‑Time Tracking",
-                  "Seamless Coordination",
+                  "Secure Handling",
+                  "Flexible Solutions",
                   "On‑Time Delivery",
-                  "Transparent Pricing",
-                  "Efficient Logistics",
+                  "Experienced Team",
+                  "Real-Time Tracking",
                 ].map((text, i) => (
                   <InfoItem key={i} text={text} />
                 ))}
               </div>
 
-              <div className="ml-auto">
-                <button
-                  onClick={() => window.location.href = "/contact"}
-                  className="flex items-center gap-[10px] rounded-full px-[8px] py-[10px] text-white font-medium text-[14px] font-inter mt-4 sm:mt-[-75px]"
-                  style={{
-                    background: "linear-gradient(106.69deg, #B21F24 -15.52%, #025E9B 130.42%)",
-                    boxShadow: "0px 8px 18px 0px #8888881F",
-                  }}
-                >
-                  <span>Get in Touch</span>
-                  <div className="flex items-center justify-center rounded-full" style={{ width: "24px", height: "12px", padding: "5px", backgroundColor: "rgba(255,255,255,0.2)" }}>
-                    <svg width="10.5" height="9.92" viewBox="0 0 10.5 9.92" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M0.805 1.58C1.058 0.958 1.84 0.838 2.25 1.33L3.345 2.625C3.678 3.033 3.58 3.63 3.135 3.89C2.718 4.132 2.503 4.535 2.56 4.965C2.7 6.02 3.48 6.78 4.537 6.923C4.965 6.98 5.37 6.767 5.612 6.348C5.87 5.905 6.468 5.805 6.877 6.137L8.172 7.232C8.665 7.642 8.545 8.424 7.922 8.678C6.79 9.141 4.26 9.407 2.265 7.37C0.208 5.273 0.461 2.773 0.805 1.58Z"
-                        fill="white"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
+  {/* ✅ CTA Button - Fully Responsive */}
+<div className="ml-auto relative lg:-top-[72px] w-full sm:w-auto flex justify-center sm:justify-end mt-6 sm:mt-0">
+ <button
+      onClick={() => window.location.href = '/contact'}
+      className="flex items-center gap-[6px] rounded-full px-[12px] py-[6px] text-white font-medium text-[14px] font-inter"
+      style={{
+        background: 'linear-gradient(106.69deg, #B21F24 -15.52%, #025E9B 130.42%)',
+        boxShadow: '0px 8px 18px 0px #8888881F',
+      }}
+    >
+      Get in Touch
+      <div className="w-[14px] h-[14px] flex justify-center items-center">
+        <img
+          src={phone}
+          alt="Phone Icon"
+          className="w-[8px] h-[8px]"
+        />
+      </div>
+    </button>
+  </div>
+</div>
+
+
+
+   
+
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+          
+        
+      
 
       {/* 🧑‍💼 FOUNDER SECTION */}
-      <div className="w-full flex flex-col lg:flex-row justify-center px-4 mt-[80px] gap-[32px]">
+      <div className="founder-section w-full flex flex-col lg:flex-row justify-center px-4 mt-[80px] gap-[32px]">
         <img src={founder_img} alt="Founder" className="w-full max-w-[547px] h-auto lg:h-[476px] rounded-[16px] object-cover" />
         <div className="flex flex-col w-full lg:w-[648px] h-auto gap-[24px] mt-[20px]">
           <div className="flex flex-col gap-[16px] mt-[40px]">
@@ -210,16 +218,16 @@ export default function About() {
               "At Ladiva Logistics, our journey began with a simple vision — to redefine reliability in logistics. As the founder, I believed businesses deserved more than just delivery; they deserved a trusted partner. With dedication, innovation, and an unshakable focus on customer satisfaction, we’ve grown into a company that businesses rely on locally and internationally. Every milestone we reach is powered by a passionate team and a clear mission: to move our clients forward with excellence, every step of the way."
             </p>
           </div>
-          <div className="flex flex-col gap-[8px] w-[145px] h-[48px]">
-            <span className="text-[#000] font-outfit text-[20px] font-medium leading-[100%]">Oni Ladi Victoria</span>
-            <span className="text-[#000] font-inter text-[12px] font-normal leading-[100%]">C.E.O Ladiva Logistics</span>
+          <div>
+            <h4 className="text-lg font-outfit">Oni Ladi Victoria</h4>
+            <p className="text-sm font-inter">C.E.O Ladiva Logistics</p>
           </div>
         </div>
       </div>
 
       {/* 📍 LOCATION SECTION */}
-      <div className="w-full flex flex-col lg:flex-row justify-center px-4 mt-[64px] gap-[32px]">
-        <div className="flex flex-col w-full lg:w-[508px] h-auto gap-[24px] mt-[20px]">
+      <div className="location-section w-full flex flex-col lg:flex-row justify-center px-4 mt-[64px] gap-[32px]">
+        <div className="flex flex-col w-full lg:w-[508px] h-auto gap-[24px] mt-[60px]">
           <div className="inline-flex items-center gap-[4px]">
             <span className="w-[4px] h-[4px] bg-[#FF1A1A] rounded-full inline-block" />
             <span className="text-[#0066FF] font-inter font-medium text-[12px] tracking-[0.014em] uppercase">
@@ -229,6 +237,13 @@ export default function About() {
           <h2 className="text-[#1A1A1A] font-outfit font-medium text-[28px] sm:text-[40px] leading-[36px] sm:leading-[52px]">
             We’re Closer Than You Think
           </h2>
+        <div className="flex items-center gap-2">
+     <svg xmlns="http://www.w3.org/2000/svg" fill="#FF1A1A" viewBox="0 0 24 24" width="20" height="19">
+       <path d="M12 2C8.13401 2 5 5.13401 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86599-3.13401-7-7-7zm0 9.5c-1.3807 0-2.5-1.1193-2.5-2.5s1.1193-2.5 2.5-2.5 2.5 1.1193 2.5 2.5-1.1193 2.5-2.5 2.5z" />
+     </svg>
+     <span className="text-[#333] font-inter text-sm font-medium">Company Address:</span>
+   </div>
+          
           <p className="text-[#333333] font-inter text-[16px] leading-[24px] opacity-90">
             7a, Ekhi Close, Valley Estate by MRS Filling Station, Cement Bus Stop, Idi Mangoro, Ikeja, Lagos.
           </p>
@@ -239,5 +254,5 @@ export default function About() {
       </div>
       <Get_In_Touch />
     </div>
-  );
+);
 }
