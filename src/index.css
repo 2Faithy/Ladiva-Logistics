@@ -1,6 +1,22 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+/* 🟡 Clip Path Utility */
 .clip-octagon {
   clip-path: polygon(
     30% 0%, 70% 0%,
@@ -9,299 +25,20 @@
     0% 70%, 0% 30%
   );
 }
-body {
-  overflow-x: hidden;
-}
-/* Base adjustments */
-section, .section-block {
+
+/* 🚫 Remove generic section limit — use custom class for layout instead */
+.section-block {
   max-width: 1240px;
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
 }
 
-
-/* ========== VERY SMALL MOBILE (≤ 375px) ========== */
-@media (max-width: 375px) {
-  .hero-section h1 {
-    font-size: 22px;
-    line-height: 32px;
-  }
-
-  .hero-section p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .about-section p,
-  .founder-section p,
-  .location-section p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .get-in-touch-text h2 {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .get-in-touch-text p {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .get-in-touch-button {
-    font-size: 13px;
-    padding: 10px;
-  }
-
-  .info-item .info-text {
-    font-size: 13px;
-  }
-
-  .about-section .flex-wrap > div span:first-child {
-    font-size: 18px;
-  }
-
-  .about-section .flex-wrap > div span:last-child {
-    font-size: 13px;
-  }
-
-  .founder-section h2,
-  .location-section h2 {
-    font-size: 22px;
-    line-height: 30px;
-  }
-
-  .location-section img {
-    height: 200px;
-  }
-
-  .get-in-touch-button-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  /* GENERAL FIXES */
-  body {
-    overflow-x: hidden;
-  }
-
-  .hero-section h1 {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .hero-section p {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .hero-section {
-    padding: 0 16px;
-  }
-
-  /* ABOUT SECTION */
-  .about-section {
-    padding: 24px 16px;
-  }
-
-  .about-section > div {
-    gap: 24px;
-  }
-
-  .about-section p {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .about-section .info-item {
-    width: 100%;
-    justify-content: flex-start;
-  }
-
-  /* Checkmarks + Stats */
-  .about-section .flex-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .about-section .flex-wrap > div {
-    width: 100%;
-    border-right: none !important;
-    padding-right: 0 !important;
-    padding-bottom: 12px;
-  }
-
-  /* FOUNDER SECTION */
-  .founder-section {
-    flex-direction: column;
-    gap: 32px;
-    padding: 0 16px;
-  }
-
-  .founder-section img {
-    width: 100%;
-    height: auto;
-    max-height: 350px;
-  }
-
-  .founder-section h2 {
-    font-size: 26px;
-    line-height: 36px;
-  }
-
-  .founder-section p {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  /* LOCATION SECTION */
-  .location-section {
-    flex-direction: column;
-    gap: 32px;
-    padding: 0 16px;
-  }
-
-  .location-section h2 {
-    font-size: 26px;
-    line-height: 36px;
-  }
-
-  .location-section p {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .location-section img {
-    height: 250px;
-  }
-
-  /* GET IN TOUCH SECTION */
-  .get-in-touch-container {
-    flex-direction: column;
-    gap: 24px;
-    padding: 0 16px;
-    text-align: center;
-  }
-
-  .get-in-touch-text h2 {
-    font-size: 22px;
-    line-height: 32px;
-  }
-
-  .get-in-touch-text p {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .get-in-touch-button-wrapper {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .get-in-touch-button {
-    width: 100%;
-    justify-content: center;
-  }
-
-  /* Checkmark tags (InfoItem) */
-  .info-item {
-    flex-wrap: nowrap;
-    min-width: 100%;
-  }
-
-  .info-item .info-text {
-    font-size: 14px;
-  }
-}
-
-
-
-
-/* ========== TABLETS & LARGER TABLETS (≥ 768px) ========== */
-@media (min-width: 768px) {
-  .hero-section h1 {
-    font-size: 42px;
-    line-height: 52px;
-  }
-
-  .hero-section p {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .about-section p,
-  .founder-section p,
-  .location-section p {
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  .get-in-touch-text h2 {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .get-in-touch-text p {
-    font-size: 17px;
-    line-height: 27px;
-  }
-
-  .get-in-touch-button {
-    font-size: 14px;
-    padding: 12px 18px;
-  }
-
-  .info-item .info-text {
-    font-size: 14px;
-  }
-
-  .about-section .flex-wrap > div span:first-child {
-    font-size: 22px;
-  }
-
-  .about-section .flex-wrap > div span:last-child {
-    font-size: 14px;
-  }
-
-  .founder-section h2,
-  .location-section h2 {
-    font-size: 32px;
-    line-height: 42px;
-  }
-
-  .location-section img {
-    height: 320px;
-  }
-}
-
-/* ========== LARGE TABLETS / SMALL DESKTOPS (≥ 1024px) ========== */
-@media (min-width: 1024px) {
-  .hero-section h1 {
-    font-size: 48px;
-    line-height: 60px;
-  }
-
-  .hero-section p {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .get-in-touch-text h2 {
-    font-size: 32px;
-    line-height: 44px;
-  }
-
-  .get-in-touch-button {
-    font-size: 15px;
-    padding: 14px 22px;
-  }
-
-  .location-section img {
-    height: 372px;
-  }
+/* ✅ Ensure hero and testimonials are full bleed */
+.hero-section,
+.testimonials-section {
+  max-width: none !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

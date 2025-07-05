@@ -1,5 +1,5 @@
 import React from "react";
-import heroBg from "../images/hero-bg.jpg";
+import heroBg from "../images/hero-bg.png";
 import clothes2order from "../images/clothes2order_icon.png";
 import businessOfFashion from "../images/the_business_of_fashion_icon.jpeg";
 import underlineWavy from "../images/underline-wavy.png";
@@ -32,7 +32,10 @@ import phone from "../images/phone.png"
 
 export function Hero() {
   return (
-    <section className="w-screen min-h-[1300px] sm:min-h-[1000px] md:min-h-[1200px] lg:min-h-[1100px] relative overflow-hidden rounded-t-[20px] sm:rounded-t-[24px] md:rounded-t-[28px] bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}>
+    <section
+      className="hero-section w-full min-h-[1300px] sm:min-h-[1000px] md:min-h-[1200px] lg:min-h-[1100px] relative overflow-hidden rounded-t-[20px] sm:rounded-t-[24px] md:rounded-t-[28px] bg-cover bg-center"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#02021C]/95 rounded-t-[20px] sm:rounded-t-[24px] md:rounded-t-[28px] z-0" />
 
@@ -64,17 +67,19 @@ export function Hero() {
   </div>
 </div>
 
-        
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl lg:text-[64px] font-semibold font-['Gabarito'] text-white leading-snug sm:leading-[60px] lg:leading-[76.8px] relative">
-          <span className="text-[#B21F24]">Powering</span> Your Business Through Efficient{" "}
-          <span className="text-[#0066FF] relative inline-block">
-            Logistics
-            <img
-              src={underlineWavy}
-              alt="Underline"
-              className="absolute left-1/2 -translate-x-1/2 -bottom-1 sm:-bottom-2 w-20 sm:w-32 lg:w-[248px] h-2 sm:h-[13px]"
-            />
+        <h1 className="mt-4 text-3xl sm:text-4xl lg:text-[64px] font-semibold font-['Gabarito'] text-white leading-snug sm:leading-[60px] lg:leading-[76.8px] text-center">
+          <span className="text-[#B21F24]">Powering</span> Your Business Through{" "}
+          <span className="inline-block whitespace-nowrap">
+            Efficient{" "}
+            <span className="text-[#0066FF] relative inline-block">
+              Logistics
+              <img
+                src={underlineWavy}
+                alt="Underline"
+                className="absolute left-1/2 -translate-x-1/2 -bottom-1 sm:-bottom-2 w-20 sm:w-32 lg:w-[248px] h-2 sm:h-[13px]"
+              />
+            </span>
           </span>
         </h1>
 
@@ -89,7 +94,7 @@ export function Hero() {
         </p>
       </div>
 
-      {/* Desktop Layout: Buttons + Images */}
+      {/* Desktop Layout */}
       <div className="hidden sm:block absolute w-[1344px] h-[596px] left-1/2 -translate-x-1/2 top-[420px] z-10">
         <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[332px] flex flex-col gap-6">
           <button
@@ -128,29 +133,29 @@ export function Hero() {
         <img src={vector2} alt="Vector 2" className="absolute top-[363px] left-[932px] w-[60px] h-[128px]" />
       </div>
 
-      {/* Mobile Layout: Buttons + Images */}
-<div className="block sm:hidden px-4 pt-10 z-10 relative">
-  <div className="flex flex-col gap-3 items-center mb-6">
-    <button
-      onClick={() => (window.location.href = "/contact")}
-      className="flex items-center justify-between gap-2 px-4 py-2 rounded-full text-white font-semibold font-manrope text-sm bg-gradient-to-r from-[#FF1A1A] to-[#0066FF] w-full max-w-[260px] shadow-md"
-    >
-      Let’s Move Your Goods
-      <div className="w-5 h-5 bg-[#0066FF] rounded-full flex items-center justify-center">
-        <img src={truckIcon} alt="Truck icon" className="w-[16px] h-[13px] object-contain" />
-      </div>
-    </button>
+      {/* Mobile Layout */}
+      <div className="block sm:hidden px-4 pt-10 z-10 relative">
+        <div className="flex flex-col gap-3 items-center mb-6">
+          <button
+            onClick={() => (window.location.href = "/contact")}
+            className="flex items-center justify-between gap-2 px-4 py-2 rounded-full text-white font-semibold font-manrope text-sm bg-gradient-to-r from-[#FF1A1A] to-[#0066FF] w-full max-w-[260px] shadow-md"
+          >
+            Let’s Move Your Goods
+            <div className="w-5 h-5 bg-[#0066FF] rounded-full flex items-center justify-center">
+              <img src={truckIcon} alt="Truck icon" className="w-[16px] h-[13px] object-contain" />
+            </div>
+          </button>
 
-    <button
-      onClick={() => (window.location.href = "/about")}
-      className="flex items-center justify-between gap-2 px-4 py-2 rounded-full border border-white text-white font-manrope text-sm w-full max-w-[260px] shadow"
-    >
-      Learn More About Us
-      <div className="w-5 h-5 flex items-center justify-center">
-        <img src={sendIcon} alt="Send icon" className="w-3.5 h-3.5 object-contain opacity-85" />
-      </div>
-    </button>
-</div>
+          <button
+            onClick={() => (window.location.href = "/about")}
+            className="flex items-center justify-between gap-2 px-4 py-2 rounded-full border border-white text-white font-manrope text-sm w-full max-w-[260px] shadow"
+          >
+            Learn More About Us
+            <div className="w-5 h-5 flex items-center justify-center">
+              <img src={sendIcon} alt="Send icon" className="w-3.5 h-3.5 object-contain opacity-85" />
+            </div>
+          </button>
+        </div>
 
         <div className="flex flex-col gap-6 items-center">
           {[image1, image2, image3].map((img, i) => (
@@ -161,8 +166,8 @@ export function Hero() {
                 background: i === 0
                   ? "linear-gradient(174.02deg, rgba(0, 21, 255, 0.72), rgba(253, 203, 2, 0.72))"
                   : i === 1
-                  ? "linear-gradient(151.44deg, rgba(142, 79, 230, 0.72), rgba(230, 92, 79, 0.72))"
-                  : "linear-gradient(212.62deg, rgba(42, 42, 114, 0.72), rgba(96, 200, 151, 0.72))",
+                    ? "linear-gradient(151.44deg, rgba(142, 79, 230, 0.72), rgba(230, 92, 79, 0.72))"
+                    : "linear-gradient(212.62deg, rgba(42, 42, 114, 0.72), rgba(96, 200, 151, 0.72))",
               }}
             >
               <img src={img} alt={`Mobile image ${i}`} className="absolute top-[10px] left-[10px] w-[calc(100%-20px)] h-[calc(100%-20px)] rounded-[16px] object-cover opacity-[0.94]" />
@@ -173,6 +178,7 @@ export function Hero() {
     </section>
   );
 }
+
 
 export function Services() {
   return (
@@ -545,6 +551,7 @@ function TestimonialCard({ profile, name, role, testimony, remarkColor, borderCo
     </div>
   );
 }
+
 
 export function Get_In_Touch() {
   return (

@@ -135,7 +135,7 @@ export default function About() {
 
             <div className="w-full flex flex-wrap justify-start gap-x-[0px] gap-y-[16px] opacity-90 mb-[0px] mt-[19px]">
               {[
-                { label: "Experience", value: "4 Years" },
+                { label: "Experience", value: "8 Years" },
                 { label: "Clients", value: "200+" },
                 { label: "Support", value: "24/7" },
                 { label: "On-Time Delivery", value: "100%" },

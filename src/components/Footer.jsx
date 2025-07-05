@@ -69,13 +69,13 @@ export default function Footer() {
 
   {/* WhatsApp */}
   <a
-    href="https://wa.me/2349119318878"
+    href="https://wa.me/2349035577203"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center gap-2"
   >
     <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
-    +2349119318878
+    +2349035577203
   </a>
 </div>
 </div>
